@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./app.css" />
+  <script type="module" src="./js/lib/app.js" defer></script>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
+
+  <title>Web3</title>
+</head>
+
+<body>
+  <header class="top-bar">
+    <h1>BlockExplorer - IIU2</h1>
+  </header>
+  <main>
+    <div class="container">
+      <!-- START INPUT SECTION -->
+      <section class="mainSection">
+        <div class="form-control checkBalance-position">
+          <h2>Check Account Balance</h2>
+          <input type="text" name="accountNumber" id="accountNumber" placeholder="Ange konto" />
+          <button id="checkBalance" class="btn btn-primary">Check Account Balance</button>
+          <div class="balance-cont">
+            <span>Your Accounts Balance: </span>
+            <div id="balance" class="balance"></div>
+          </div>  
+        </div>
+        <div class="form-control">
+          <input type="text" name="amount" id="amount" placeholder="Ange värde att överföra" />
+        </div>
+        <div class="form-control">
+          <input type="text" name="toAccountNumber" id="toAccountNumber" placeholder="Till konto" />
+        </div>
+        <div class="form-control">
+          <button id="sendTx" class="btn btn-primary">Send</button>
+        </div>
+
+        <div id="transactionResult" class="transactionResult"></div>
+
+        <div class="form-control">
+          <button id="getLatestBlock" class="btn btn-primary blockButton">Reload Latest Block</button>
+          <h2>Current Block Number</h2>
+          <div id="blockNumber" class="blockNumber"></div>
+        </div>
+      </section> <!-- END INPUT SECTION -->
+
+
+      <!-- START HISTORY LISTING SECTION -->
+      <section id="historySection" class="historySection">
+        <div id="transactionHistory" class="transactionHistory">
+          <h2 class="transactionHeaderWidth">Transaction History</h2>
+          <ul id="transactionList" class="transactionList"></ul>
+        </div>
+      </section> <!-- END HISTORY LISTING SECTION -->
+
+    </div>
+  </main>
+</body>
+
+</html>
